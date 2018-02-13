@@ -1,0 +1,203 @@
+% !TEX root = ./es-manual-main.tex
+
+
+%% Based on a TeXnicCenter-Template by Gyorgy SZEIDL.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%------------------------------------------------------------
+%
+\documentclass{article}%
+%Options -- Point size:  10pt (default), 11pt, 12pt
+%        -- Paper size:  letterpaper (default), a4paper, a5paper, b5paper
+%                        legalpaper, executivepaper
+%        -- Orientation  (portrait is the default)
+%                        landscape
+%        -- Print size:  oneside (default), twoside
+%        -- Quality      final(default), draft
+%        -- Title page   notitlepage, titlepage(default)
+%        -- Columns      onecolumn(default), twocolumn
+%        -- Equation numbering (equation numbers on the right is the default)
+%                        leqno
+%        -- Displayed equations (centered is the default)
+%                        fleqn (equations start at the same distance from the right side)
+%        -- Open bibliography style (closed is the default)
+%                        openbib
+% For instance the command
+%           \documentclass[a4paper,12pt,leqno]{article}
+% ensures that the paper size is a4, the fonts are typeset at the size 12p
+% and the equation numbers are on the left side
+%
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pdfpages}
+
+%\usepackage{amsmath}%
+%\usepackage{amsfonts}%
+%\usepackage{amssymb}%
+%\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{subfig}
+
+%\usepackage{amsmath}
+\usepackage{amsthm}
+
+
+
+% To construct algorithms.
+%%% \usepackage[section]{algorithm} % [section] is use to define the numbering mode
+%%% \usepackage{algorithmic} 
+
+%%%
+%%% Algorithms.  Don't have to use end for, etc.
+\usepackage[ruled, vlined]{algorithm2e}
+
+
+% For underlines.  The \normalem returns \emph to italics (not underline).
+% To make wavy underline, use \uwave{boat} wavy underline
+% see http://www.cvrti.utah.edu/~macleod/latex/
+\usepackage{ulem}
+\normalem
+
+% For 'wingdings' (e.g., the right arrow, as in "as goes to infinity" -->OO.
+\usepackage{pifont}
+
+% For color text.
+\usepackage{color}
+
+% Long tables.
+\usepackage{xtab}
+
+\usepackage{multirow}
+
+% For fields.
+\newcommand{\field}[1]{\mathbb{#1}}
+
+
+%% Horizontal lines in doc.
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% Font size
+% 10 pt \small
+% 12 pt \large
+%\small
+
+
+% Bibliography formatting.
+% \usepackage{harvard}
+% Reference styles,formats.
+% See http://merkel.zoneo.net/Latex/natbib.php for details.
+% The following is the manual:  http://www.ctex.org/documents/packages/bibref/natbib.pdf
+%\usepackage{natbib}
+%\bibpunct{(}{)}{;}{a}{,}{,}
+
+% Path to figures.
+\graphicspath{{./figures/}}
+
+\newcommand{\figsize}{0.65}
+\newcommand{\smallfigsize}{0.4}
+
+
+
+% Code name and version.
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+%-------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+%\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+%\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+
+%\newcommand{\hatnhl}{\mbox{$\mathcal{C}$}}
+\newcommand{\hatnhl}{\hat{N}_{hl}}
+
+
+\begin{document}
+
+
+\title{MARS Network Services User Manual\\
+Version 2.0}
+
+\author{Sherif Abdelhamid, Chris Kuhlman}
+
+\date{\today}
+\maketitle
+
+
+\tiny
+
+\HRule \\[0.05cm]
+
+\HRule \\[0.05cm]
+
+\small
+
+\tableofcontents
+
+\tiny
+
+\HRule \\[0.05cm]
+
+\HRule \\[0.05cm]
+
+\normalsize
+
+
+% -------------------------------------------
+\begin{abstract}
+
+The purpose of this document is to provide an overview of MARS services, installation and usage.
+
+\end{abstract}
+
+
+% -------------------------------------------
+
+\input{introduction}
+\line(1,0){500}
+
+\input{installation}
+
+\line(1,0){500}
+
+\input{Using-MARS}
+
+\line(1,0){500}
+\input{Adding-new-networks}
+
+
+\line(1,0){500}
+\input{verification-testing}
+%
+% ---- Bibliography ----
+%
+
+%\bibliographystyle{plain}
+%\bibliography{refs-mnf-files}
+
+
+
+
+\end{document}

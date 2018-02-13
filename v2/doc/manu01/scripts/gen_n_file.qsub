@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -lwalltime=03:00:00
+#PBS -W group_list=sipcinet
+#PBS -q sfx_q
+#PBS -N generator
+#PBS -o /home/sherief/Intersims-hybrid-01-03/22-1/generator.out
+cd $PBS_O_WORKDIR
+export PATH=/home/sipcinet/edison/python-2.7.9/bin:$PATH
+python node_file_gen.py sample2
+

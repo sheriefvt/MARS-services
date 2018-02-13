@@ -1,0 +1,13 @@
+% -------------------------------------------
+\section{Verification Testing}
+Note: verification testing are used to validate MARS services output after every code change (e.g. new feature). A set of python scripts were prepared to automate the tests. There are three separate directories under the [code directory]/v2/src/code/verification directory that contain the python scripts and the valid output files (with extension .valid). Some of the verification scripts don't use .valid files, the data is hard-coded in the python script file.
+
+\begin{itemize}
+\item go to [code directory]/v2/src/code/verification. 
+\item to verify the measure service go to dir /measure\_service and enter measure\_verify.py. Note: the measure service should runs on shadowfax. 
+\item to verify the query service go to dir /query\_service and enter query\_verify.py. 
+\item to verify the workflow service go to dir /workflow\_service and enter workflow\_verify.py.
+
+
+\end{itemize}
+Note: the ordering of testing the services should be consistent with the above ordering. The sample and sample2 networks are used for the verification testing. Please run reset\_sample.py, found at directory [code directory]/v2/src/code/verification, before starting the tests. This will reset the database state and remove any priori computations for these two networks.
